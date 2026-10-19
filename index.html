@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#071018" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="1초 챌린지" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="description" content="정확히 1.000초에 멈추는 타이밍 챌린지" />
+  <title>1초 챌린지</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <main class="app">
+    <header class="brand">
+      <p class="brand-mark">1초 챌린지</p>
+      <p class="tagline">정확히 1.000초, 감각으로 멈춘다</p>
+    </header>
+
+    <section class="stage" aria-live="polite">
+      <p class="time-label" id="timeLabel">준비</p>
+      <p class="time-display" id="timeDisplay">0.000</p>
+      <p class="unit">초</p>
+    </section>
+
+    <section class="result" id="resultPanel" hidden>
+      <p class="grade" id="gradeText"></p>
+      <p class="error" id="errorText"></p>
+    </section>
+
+    <button type="button" class="tap-btn" id="tapBtn" aria-describedby="hintText">
+      <span class="tap-btn-label" id="tapLabel">시작</span>
+    </button>
+
+    <p class="hint" id="hintText">시작하면 타이머가 돌아요. 1초가 되면 다시 탭!</p>
+
+    <footer class="best">
+      <span>최고 기록</span>
+      <strong id="bestScore">—</strong>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
